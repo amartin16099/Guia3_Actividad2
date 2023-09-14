@@ -20,6 +20,14 @@ public class CentralPacientes {
     // -----------------------------------------------------------------
     // Atributos
     // -----------------------------------------------------------------
+    /**
+     * Primer paciente de la lista
+     */
+    private Paciente primero;
+    /**
+     * Número de pacientes en la central
+     */
+    private int numPacientes;
 
     /**
      * Lista de pacientes
@@ -39,6 +47,8 @@ public class CentralPacientes {
      * Crea una nueva central sin pacientes y con una lista predefinida de clínicas
      */
     public CentralPacientes() {
+        primero = null;
+        numPacientes = 0;
         pacientes = new ArrayList<>();
 
         listaClinicas = new ArrayList<>();
