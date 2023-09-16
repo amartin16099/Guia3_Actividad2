@@ -1,7 +1,7 @@
 /**
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * Universidad Ean (Bogot· - Colombia)
- * Departamento de TecnologÌas de la InformaciÛn y Comunicaciones
+ * Universidad Ean (Bogot√° - Colombia)
+ * Departamento de Tecnolog√≠as de la Informaci√≥n y Comunicaciones
  * Licenciado bajo el esquema Academic Free License version 2.1
  * <p>
  * Proyecto Central de Pacientes.
@@ -34,7 +34,7 @@ public class Paciente {
     // -----------------------------------------------------------------
 
     /**
-     * El cÛdigo del paciente
+     * El c√≥digo del paciente
      */
     private int codigo;
 
@@ -44,12 +44,12 @@ public class Paciente {
     private String nombre;
 
     /**
-     * ClÌnica a la que asiste el paciente
+     * Cl√≠nica a la que asiste el paciente
      */
     private String clinica;
 
     /**
-     * La informaciÛn mÈdica del paciente
+     * La informaci√≥n m√©dica del paciente
      */
     private String informacionMedica;
 
@@ -75,11 +75,11 @@ public class Paciente {
     }
 
     // -----------------------------------------------------------------
-    // MÈtodos
+    // M√©todos
     // -----------------------------------------------------------------
 
     /**
-     * Retorna el cÛdigo del paciente
+     * Retorna el c√≥digo del paciente
      */
     public int darCodigo() {
         return codigo;
@@ -93,16 +93,16 @@ public class Paciente {
     }
 
     /**
-     * Retorna la clÌnica asignada al paciente
+     * Retorna la cl√≠nica asignada al paciente
      */
     public String darClinica() {
         return clinica;
     }
 
     /**
-     * Retorna la informaciÛn mÈdica del paciente
+     * Retorna la informaci√≥n m√©dica del paciente
      *
-     * @return La informaciÛn mÈdica del paciente
+     * @return La informaci√≥n m√©dica del paciente
      */
     public String darInformacionMedica() {
         return informacionMedica;
@@ -116,16 +116,28 @@ public class Paciente {
     }
 
     /**
-     * Retorna una cadena con la informaciÛn del paciente
+     * Retorna una cadena con la informaci√≥n del paciente
      */
     public String toString() {
         return "[ " + codigo + " ]: " + nombre;
     }
 
     /**
-     * Cambia la informaciÛn mÈdica del paciente
+     * Cambia la informaci√≥n m√©dica del paciente
      */
     public void cambiarInformacionMedica(String informacion) {
         informacionMedica = informacion;
+    }
+    
+    private Paciente siguiente;
+
+    // Constructor de Paciente y otros m√©todos
+
+    public void cambiarSiguiente(Paciente siguiente) {
+        this.siguiente = siguiente;
+    }
+
+    public Paciente darSiguiente() {
+        return siguiente;
     }
 }
